@@ -99,7 +99,9 @@ const Header = () => {
                 <Link to="">Settings</Link>
               </li>
               <li>
-                <button>Login</button>
+                <Link to="/login">
+                  <button>Login</button>
+                </Link>
               </li>
             </ul>
           </div>
