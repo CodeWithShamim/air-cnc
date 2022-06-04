@@ -22,6 +22,8 @@ const Login = () => {
           type="text"
           name="phone"
           id="phone"
+          minLength="8"
+          maxLength="13"
           placeholder="Phone Number"
         />
         <p className="text-left ml-4 text-sm">
