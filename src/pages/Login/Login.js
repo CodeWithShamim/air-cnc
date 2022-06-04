@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import LoadCountry from "./LoadCountry";
 
 const Login = () => {
   return (
@@ -6,13 +8,15 @@ const Login = () => {
       <div className="flex flex-col w-4/5 md:w-2/4 lg:w-1/3">
         <h1 className="text-2xl font-bold pb-8">Login</h1>
 
-        <input
-          className="border border-gray-200 outline-none rounded-2xl py-4 px-3"
+        <select
+          className="border border-gray-200 outline-none rounded-2xl text-gray-900 py-4 px-3"
           type="text"
-          name="phone"
-          id="phone"
-          placeholder="Country/Region"
-        />
+          name="country"
+          id="country"
+        >
+          <LoadCountry />
+        </select>
+
         <input
           className="border border-gray-200 outline-none rounded-2xl py-4 px-3 my-3 "
           type="text"
@@ -29,7 +33,10 @@ const Login = () => {
           Continue
         </button>
         <p>
-          Dont't have an account? <span className="font-bold">Sign up</span>
+          Dont't have an account?{" "}
+          <Link to="/signup">
+            <span className="font-bold cursor-pointer">Sign up</span>
+          </Link>
         </p>
       </div>
     </div>
