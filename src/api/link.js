@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const link = axios.create({
-  baseUrl: "http://localhost:5000",
+  baseURL: "http://localhost:5000",
 });
