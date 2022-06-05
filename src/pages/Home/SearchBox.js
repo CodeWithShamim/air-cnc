@@ -19,9 +19,9 @@ const SearchBox = () => {
       </div>
 
       {/* ---------date-------- */}
-      <div className="mt-4 flex justify-between">
+      <div className="mt-4 flex flex-col md:flex-row justify-between">
         {/* arrival */}
-        <div className="flex basis-2/4 mr-3 flex-col text-left shadow-xl p-6 rounded-xl border border-base-100">
+        <div className="flex basis-2/4 md:mr-3 flex-col text-left shadow-xl p-6 rounded-xl border border-base-100">
           <label className="text-base-300" htmlFor="arrival">
             Arrival
           </label>
@@ -33,7 +33,7 @@ const SearchBox = () => {
           />
         </div>
         {/* departure */}
-        <div className="flex basis-2/4 flex-col text-left shadow-xl p-6 rounded-xl border border-base-100">
+        <div className="flex basis-2/4 mt-4 md:mt-0 flex-col text-left shadow-xl p-6 rounded-xl border border-base-100">
           <label className="text-base-300" htmlFor="departure">
             Departure
           </label>
