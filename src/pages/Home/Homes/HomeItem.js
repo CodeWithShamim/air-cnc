@@ -4,12 +4,12 @@ import { FaStar } from "react-icons/fa";
 const HomeItem = ({ home }) => {
   const { img, name, title, price, rating } = home;
   return (
-    <div className="text-left">
-      <img className="w-52 h-48 rounded object-cover" src={img} alt={name} />
+    <div className="text-left w-full">
+      <img className="w-100 rounded object-cover" src={img} alt={name} />
       <p className="text-sm font-semibold text-primary pt-2">{title}</p>
       <h2 className="text-lg font-bold">{name}</h2>
       <p>${price} per person</p>
-      <p className="flex text-primary items-center justify-start">
+      <p className="flex text-secondary text-xs items-center justify-start">
         <FaStar />
         <FaStar />
         <FaStar />

@@ -13,8 +13,6 @@ const Homes = () => {
       .catch((error) => console.log("Error", error.message));
   }, []);
 
-  console.log(homes);
-
   return (
     <div className="mt-16">
       <div className="flex items-center justify-between px-6 pb-3">
@@ -26,10 +24,13 @@ const Homes = () => {
       </div>
 
       {/* -------homes-------- */}
-      <div className="px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+      <div className="px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 relative">
         {homes?.slice(0, 3)?.map((home) => (
           <HomeItem key={home._id} home={home}></HomeItem>
         ))}
+        <div className="bg-base-100 rounded-full shadow-xl border p-1 absolute right-2 top-16">
+          <FaAngleRight className="text-xl" />
+        </div>
       </div>
     </div>
   );
