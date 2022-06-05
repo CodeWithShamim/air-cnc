@@ -2,15 +2,23 @@ import React, { useEffect, useState } from "react";
 import { link } from "../../../api/link";
 import ExperienceItem from "./ExperienceItem";
 import { FaAngleRight } from "react-icons/fa";
+import ExperienceSkeleton from "../../../skeleton/ExperienceSkeleton";
 
 const Experiences = () => {
   const [experiences, setExperiences] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   // get data
   useEffect(() => {
     link("/experience")
-      .then(({ data }) => setExperiences(data))
-      .catch((error) => console.log("Error", error.message));
+      .then(({ data }) => {
+        setIsLoading(false);
+        setExperiences(data);
+      })
+      .catch((error) => {
+        setIsLoading(false);
+        console.log("Error", error.message);
+      });
   }, []);
 
   return (
@@ -31,6 +39,9 @@ const Experiences = () => {
             experience={experience}
           ></ExperienceItem>
         ))}
+
+        {/* set loading skeleton  */}
+        {!isLoading && [1, 2, 3, 4].map((n) => <ExperienceSkeleton key={n} />)}
       </div>
     </div>
   );

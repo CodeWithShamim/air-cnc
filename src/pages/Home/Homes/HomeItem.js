@@ -9,7 +9,7 @@ const HomeItem = ({ home }) => {
       <p className="text-sm font-semibold text-primary pt-2">{title}</p>
       <h2 className="text-lg font-bold">{name}</h2>
       <p>${price} per person</p>
-      <p className="flex text-secondary text-xs items-center justify-start">
+      <p className="flex text-primary text-xs items-center justify-start">
         <FaStar />
         <FaStar />
         <FaStar />

@@ -28,7 +28,7 @@ const Homes = () => {
         {homes?.slice(0, 3)?.map((home) => (
           <HomeItem key={home._id} home={home}></HomeItem>
         ))}
-        <div className="bg-base-100 rounded-full shadow-xl border p-1 absolute right-2 top-16">
+        <div className="bg-base-100 rounded-full shadow-xl border p-1 absolute right-2 top-16 cursor-pointer">
           <FaAngleRight className="text-xl" />
         </div>
       </div>
