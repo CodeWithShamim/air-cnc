@@ -1,5 +1,6 @@
 import React from "react";
 import Experiences from "./Experiences/Experiences";
+import Homes from "./Homes/Homes";
 import SearchBox from "./SearchBox";
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
       </div>
       <div className="basis-9/12 mt-8 lg:mt-0">
         <Experiences />
+        <Homes />
       </div>
     </divs>
   );
