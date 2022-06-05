@@ -1,7 +1,7 @@
 import React from "react";
 import Skeleton from "react-loading-skeleton";
 
-const ExperienceSkeleton = () => {
+const ItemSkeleton = () => {
   return (
     <div>
       <div className="w-100 rounded">
@@ -23,4 +23,4 @@ const ExperienceSkeleton = () => {
   );
 };
 
-export default ExperienceSkeleton;
+export default ItemSkeleton;

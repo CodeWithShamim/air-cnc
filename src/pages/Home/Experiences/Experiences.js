@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { link } from "../../../api/link";
 import ExperienceItem from "./ExperienceItem";
 import { FaAngleRight } from "react-icons/fa";
-import ExperienceSkeleton from "../../../skeleton/ExperienceSkeleton";
+import ItemSkeleton from "../../../skeleton/ItemSkeleton";
 
 const Experiences = () => {
   const [experiences, setExperiences] = useState([]);
@@ -41,7 +41,7 @@ const Experiences = () => {
         ))}
 
         {/* set loading skeleton  */}
-        {!isLoading && [1, 2, 3, 4].map((n) => <ExperienceSkeleton key={n} />)}
+        {isLoading && [1, 2, 3, 4].map((n) => <ItemSkeleton key={n} />)}
       </div>
     </div>
   );

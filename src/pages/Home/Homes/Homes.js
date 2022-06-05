@@ -1,16 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { FaAngleRight } from "react-icons/fa";
 import { link } from "../../../api/link";
+import ItemSkeleton from "../../../skeleton/ItemSkeleton";
 import HomeItem from "./HomeItem";
 
 const Homes = () => {
   const [homes, setHomes] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   // get data
   useEffect(() => {
     link("/home")
-      .then(({ data }) => setHomes(data))
-      .catch((error) => console.log("Error", error.message));
+      .then(({ data }) => {
+        setIsLoading(false);
+        setHomes(data);
+      })
+      .catch((error) => {
+        setIsLoading(false);
+        console.log("Error", error.message);
+      });
   }, []);
 
   return (
@@ -28,9 +36,16 @@ const Homes = () => {
         {homes?.slice(0, 3)?.map((home) => (
           <HomeItem key={home._id} home={home}></HomeItem>
         ))}
-        <div className="bg-base-100 rounded-full shadow-xl border p-1 absolute right-2 top-16 cursor-pointer">
-          <FaAngleRight className="text-xl" />
-        </div>
+
+        {/* add loading skeleton  */}
+        {isLoading && [1, 2, 3].map((n) => <ItemSkeleton key={n} />)}
+
+        {/* --- next btn--- */}
+        {!isLoading && (
+          <div className="bg-base-100 rounded-full shadow-xl border p-1 absolute right-2 top-16 cursor-pointer">
+            <FaAngleRight className="text-xl" />
+          </div>
+        )}
       </div>
     </div>
   );
