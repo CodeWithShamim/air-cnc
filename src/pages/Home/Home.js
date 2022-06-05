@@ -3,13 +3,13 @@ import SearchBox from "./SearchBox";
 
 const Home = () => {
   return (
-    <divs className="flex px-10 my-12">
+    <divs className="flex px-16 my-12">
       {/* <h1 className="text-lg font-bold">Where do you want to go?</h1> */}
       {/* search section  */}
-      <div className="flex-1">
+      <div className="basis-2/6">
         <SearchBox />
       </div>
-      <div className="flex-1"></div>
+      <div className="basis-8/12"></div>
     </divs>
   );
 };

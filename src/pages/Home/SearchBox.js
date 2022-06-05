@@ -6,7 +6,7 @@ const SearchBox = () => {
     <div>
       {/* ---------location------- */}
       <div className="flex flex-col text-left shadow-lg p-6 rounded-xl border border-base-100">
-        <label htmlFor="location" className="font-bold">
+        <label htmlFor="location" className="font-semibold">
           Location
         </label>
         <input
@@ -19,7 +19,7 @@ const SearchBox = () => {
       </div>
 
       {/* ---------date-------- */}
-      <div className="mt-6 flex justify-between">
+      <div className="mt-4 flex justify-between">
         {/* arrival */}
         <div className="flex basis-2/4 mr-3 flex-col text-left shadow-xl p-6 rounded-xl border border-base-100">
           <label className="text-base-300" htmlFor="arrival">
@@ -29,7 +29,7 @@ const SearchBox = () => {
             type="date"
             name="arrival"
             id="arrival"
-            className="font-bold"
+            className="font-semibold"
           />
         </div>
         {/* departure */}
@@ -41,24 +41,25 @@ const SearchBox = () => {
             type="date"
             name="departure"
             id="departure"
-            className="font-bold"
+            className="font-semibold"
           />
         </div>
       </div>
 
       {/* ---------member-------- */}
-      <div className="mt-6 flex-col text-left shadow-xl rounded-xl border border-base-100">
+      <div className="mt-4 flex-col text-left shadow-xl rounded-xl border border-base-100">
         {/* member type  */}
         <div>
           <select
             name="member"
             id="member"
-            className="font-bold uppercase p-6 outline-0 w-full"
+            className="font-semibold uppercase p-6 outline-0 w-full"
           >
             <option value="2 Adults, 1 Child">2 Adults, 1 Child</option>
           </select>
           <hr />
-          <div className="p-6 font-bold uppercase">
+
+          <div className="p-6 font-semibold uppercase">
             {/* adults  */}
             <div className="flex justify-between items-center">
               <p>Adults</p>
@@ -69,7 +70,7 @@ const SearchBox = () => {
               </p>
             </div>
             {/* child  */}
-            <div className="flex justify-between items-center py-12">
+            <div className="flex justify-between items-center py-10">
               <p className="flex flex-col">
                 Child
                 <span className="font-medium text-base-300 capitalize text-sm">
@@ -99,9 +100,9 @@ const SearchBox = () => {
             </div>
           </div>
           {/* ----------- */}
-          {/* btn  */}
-          <div className="text-right m-6">
-            <button className="btn btn-primary btn-outline btn-sm px-8 font-bold uppercase">
+          {/* apply btn  */}
+          <div className="text-right m-4">
+            <button className="btn btn-primary btn-outline btn-sm px-8 font-semibold uppercase">
               Apply
             </button>
           </div>
@@ -111,7 +112,7 @@ const SearchBox = () => {
       {/* -------member end----- */}
 
       {/* -----search btn------ */}
-      <div className="w-full mt-4">
+      <div className="w-full mt-3">
         <button className="btn btn-primary btn-lg w-full text-base-100 capitalize text-xl">
           <FaSearch className="mx-2 mt-1" /> Search
         </button>
