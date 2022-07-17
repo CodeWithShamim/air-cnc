@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const link = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://aircnc100.herokuapp.com",
 });
